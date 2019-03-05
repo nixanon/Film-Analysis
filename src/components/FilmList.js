@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
 
-//import Film from './Film'; 
+import Film from './Film'; 
 
 class FilmList extends Component {
     state = {
@@ -18,12 +18,12 @@ class FilmList extends Component {
         axios
         .get('http://127.0.0.1:5000/film',{
             params: {
-                name: 'Glass'
+                name: this.state.searchString
             }
         })
         .then((response)=> {
             console.log(response);
-            
+            response.data = Array.from(response.data)
             this.setState({films: response.data});
         })
         .catch(function (error) {
@@ -53,14 +53,16 @@ class FilmList extends Component {
                         onChange={this.onSearchInputChange}
                     />
                     <Grid container spacing={24} style={{padding: 24}}>
-                    
-                    {/* {  
+                    {/* Grid item xs={12} sm={6} lg={4} xl={3}> */}
+                    {/* <Film film={this.state.films} /> */}
+                    {/* </Grid> */}
+                    {  
                         this.state.films.map(currentFilm => (
                             <Grid item xs={12} sm={6} lg={4} xl={3}>
                                 <Film film={currentFilm}/>
                             </Grid>
                         ))
-                    } */}
+                    }
                     </Grid>
                 </div>
         ) : "No Films found" }
