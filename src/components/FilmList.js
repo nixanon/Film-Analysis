@@ -16,7 +16,7 @@ class FilmList extends Component {
     }
     getFilms = () => {
         axios
-        .get('http://127.0.0.1:5000/film',{
+        .get('https://film-analysis-api.herokuapp.com/film',{
             params: {
                 name: this.state.searchString
             }
