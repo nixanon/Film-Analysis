@@ -33,13 +33,19 @@ const Film = (props) => {
                     <CardContent>
                         <Typography gutterBottom variant="headline" component="h2">
                             {props.film.title}
+                            
                         </Typography>
-                        <Typography component="p">
-                        <br />
-                            {props.film.overview}
-                        <br /> 
+                        <Typography color="textSecondary">
                             {props.film.release_date}
                         </Typography>
+                        <Typography component="p">
+                            <br/>
+                            TF-IDF Score:{' '}
+                            {props.film.score}
+                            <br/>
+                            {props.film.overview}
+                        </Typography>
+                        
                     </CardContent>
                     
                     <CardActions>
