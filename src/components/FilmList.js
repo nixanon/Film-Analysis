@@ -8,10 +8,10 @@ import Film from './Film';
 //http://127.0.0.1:5000/film
 //https://film-analysis-api.herokuapp.com/film
 class FilmList extends Component {
-    // state = {
-    //     films: [],
-    //     searchString: ''
-    // }
+    state = {
+        films: [],
+        searchString: ''
+    }
     constructor(props) {
         super(props)
         this.state = {
@@ -38,14 +38,6 @@ class FilmList extends Component {
         });
     }
 
-    // handleChange = (event) => {
-    //     if (event.target.value){
-    //         this.setState({searchString: event.target.value})
-    //     }
-    // }
-    // handleSubmit = (event) => {
-    //     this.getFilms()
-    // }
     onSearchInputChange = (event) => {
         console.log("Search changed ... " + event.target.value)
         if (event.target.value){
