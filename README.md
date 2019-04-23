@@ -1,3 +1,17 @@
+# Film-Analysis
+
+This is the client-side for the front-end of the film-analysis web app. It is written in JavaScript and provides the user interface and sends HTTP requests to the server with user input and displays the results. 
+
+## Goals
+
+### 1) Search
+Implement a search feature where the user enters one or more terms and the app returns a list of 10 films most similar to those terms. This is calculated using tf-idf and cosine simlarity scores.
+
+
+### 2) Classification
+Implement a classifier where the user types in an text overview and the app returns a list of genres it classified it into.
+This is done using Naive Bayes. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

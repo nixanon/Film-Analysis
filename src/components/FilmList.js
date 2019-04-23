@@ -36,15 +36,6 @@ class FilmList extends Component {
         });
     }
 
-    // onSearchInputChange = (event) => {
-    //     console.log("Search changed ... " + event.target.value)
-    //     if (event.target.value){
-    //         this.setState({searchString: event.target.value})
-    //     } else {
-    //         this.setState({searchString: ''})
-    //     }
-    //     this.getFilms()
-    // }
     render() {
         return (
             <div>
