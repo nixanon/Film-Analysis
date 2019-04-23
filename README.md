@@ -2,6 +2,16 @@
 
 This is the client-side for the front-end of the film-analysis web app. It is written in JavaScript and provides the user interface and sends HTTP requests to the server with user input and displays the results. 
 
+## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+1) Javascript
+2) Windows
+3) Git
+4) Netlify
+
 ## Goals
 
 ### 1) Search
