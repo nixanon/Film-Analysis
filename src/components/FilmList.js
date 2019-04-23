@@ -8,15 +8,13 @@ import Film from './Film';
 //http://127.0.0.1:5000/film
 //https://film-analysis-api.herokuapp.com/film
 class FilmList extends Component {
-    state = {
-        films: [],
-        searchString: ''
-    }
     constructor(props) {
         super(props)
         this.state = {
             films: [],
-            searchString: ''
+            searchString: '',
+            overviewString: '',
+            genres: [],
         }
         //this.getFilms()
     }
@@ -38,15 +36,15 @@ class FilmList extends Component {
         });
     }
 
-    onSearchInputChange = (event) => {
-        console.log("Search changed ... " + event.target.value)
-        if (event.target.value){
-            this.setState({searchString: event.target.value})
-        } else {
-            this.setState({searchString: ''})
-        }
-        this.getFilms()
-    }
+    // onSearchInputChange = (event) => {
+    //     console.log("Search changed ... " + event.target.value)
+    //     if (event.target.value){
+    //         this.setState({searchString: event.target.value})
+    //     } else {
+    //         this.setState({searchString: ''})
+    //     }
+    //     this.getFilms()
+    // }
     render() {
         return (
             <div>
@@ -54,9 +52,25 @@ class FilmList extends Component {
                 <div>
                     <TextField style={{padding: 24}}
                         id="searchInput"
+                        placeholder="Enter a Film Overview to classify into a genre"   
+                        margin="normal"
+                        onChange={event => {this.setState({overviewString: event.target.value})}}
+                        onKeyPress={event => {
+                                    if (event.key === 'Enter') {
+                                    this.getFilms()
+                                    }
+                                }}
+                    />
+                    <TextField style={{padding: 24}}
+                        id="searchInput"
                         placeholder="Enter Search Query"   
                         margin="normal"
-                        onChange={this.onSearchInputChange}
+                        onChange={event => {this.setState({searchString: event.target.value})}}
+                        onKeyPress={event => {
+                                    if (event.key === 'Enter') {
+                                    this.getFilms()
+                                    }
+                                }}
                     />
                     
                     <Grid container spacing={24} style={{padding: 24}}>

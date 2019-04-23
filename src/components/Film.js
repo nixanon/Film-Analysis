@@ -43,7 +43,13 @@ const Film = (props) => {
                             TF-IDF Score:{' '}
                             {props.film.score}
                             <br/>
+                            <br/>
+                            Overview:{' '}
                             {props.film.overview}
+                            <br/>
+                            <br/>
+                            Genres:{' '}
+                            {props.film.genres}
                         </Typography>
                         
                     </CardContent>
