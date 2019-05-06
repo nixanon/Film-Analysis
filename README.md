@@ -17,10 +17,15 @@ These instructions will get you a copy of the project up and running on your loc
 ### 1) Search
 Implement a search feature where the user enters one or more terms and the app returns a list of 10 films most similar to those terms. This is calculated using tf-idf and cosine simlarity scores.
 
+I cover this in detail in the following post:
+https://josecervantes.netlify.com/post/phase1/
 
 ### 2) Classification
 Implement a classifier where the user types in an text overview and the app returns a list of genres it classified it into.
 This is done using Naive Bayes. 
+
+I cover this in detail in the following post:
+https://josecervantes.netlify.com/post/phase2/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
